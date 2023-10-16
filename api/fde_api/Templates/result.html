@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        th,td{
+            padding: 5px;
+        }
+        .center{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+        <table class="center">
+            <tr>
+                <th colspan="2">
+                    <center>View Details</center>
+                </th>
+            </tr>
+            <tr>
+                <th>AWS_S3_Path</th>
+                <td>{{AWS_S3_Path}}</td>
+            </tr>
+        </table>
+    {% endblock %}
+</body>
+</html>
